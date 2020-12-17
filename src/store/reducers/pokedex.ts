@@ -3,7 +3,7 @@ import { Reducer } from "redux";
 import { PokedexTypes, PokedexState } from "../types/pokedex";
 
 const INITIAL_STATE: PokedexState = {
-	valor: "",
+	pokemons: [],
 };
 
 const pokedexReducer: Reducer<PokedexState> = (
@@ -12,7 +12,7 @@ const pokedexReducer: Reducer<PokedexState> = (
 ) => {
 	switch (action.type) {
 		case PokedexTypes.test:
-			return { ...state, valor: "exemploRedux" };
+			return { ...state };
 		default:
 			return state;
 	}

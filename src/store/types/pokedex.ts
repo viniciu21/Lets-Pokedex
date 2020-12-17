@@ -3,5 +3,15 @@ export enum PokedexTypes {
 }
 
 export interface PokedexState {
-	valor: string;
+	pokemons: Pokemon[];
+}
+
+export interface Pokemon {
+	id: number;
+	name: string;
+	types: string[];
+	imgUrl: string;
+	height: number;
+	weight: number;
+	stared: boolean;
 }
