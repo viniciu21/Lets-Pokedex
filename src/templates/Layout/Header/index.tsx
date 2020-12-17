@@ -19,6 +19,7 @@ const styles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
 			flexGrow: 1,
+			background: "#673ab7",
 		},
 		title: {
 			[theme.breakpoints.up("sm")]: {
@@ -26,10 +27,10 @@ const styles = makeStyles((theme: Theme) =>
 			},
 		},
 		avatar: {
-			marginLeft: theme.spacing(1),
+			// marginLeft: theme.spacing(1),
 		},
 		routes: {
-			marginLeft: theme.spacing(15),
+			// marginLeft: theme.spacing(15),
 		},
 	})
 );
@@ -47,11 +48,15 @@ const Header = () => {
 
 					<Avatar className={classes.avatar} src={pokebola} />
 
+					<div className={classes.root} />
+
 					<Link to="/" style={{ textDecoration: "none", color: "white" }}>
 						<Button color="inherit" className={classes.routes}>
 							Todos os pokemons
 						</Button>
 					</Link>
+
+					<div className={classes.root} />
 
 					<Link to="/stared" style={{ textDecoration: "none", color: "white" }}>
 						<Button color="inherit" className={classes.routes}>
