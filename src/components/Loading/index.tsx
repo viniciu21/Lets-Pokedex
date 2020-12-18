@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
 			display: "flex",
+			flexDirection: "column",
 			flexGrow: 1,
 			alignContent: "center",
 			justifyContent: "center",

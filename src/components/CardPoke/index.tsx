@@ -1,8 +1,11 @@
 import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { makePokemonStared, setStaredPokemons } from "../../store/ducks/pokedex/actions";
+import { Pokemon } from "../../store/ducks/pokedex/types";
+import { ApplicationState } from "../../store";
+
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import './BgColor.css';
 import {
 	Card,
 	CardActionArea,
@@ -16,8 +19,7 @@ import {
 } from "@material-ui/core";
 import StarRateSharpIcon from "@material-ui/icons/StarRateSharp";
 
-import { Pokemon } from "../../store/ducks/pokedex/types";
-import { ApplicationState } from "../../store";
+import './BgColor.css';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -43,6 +45,8 @@ const CardPoke: React.FC<CardPokeProps> = ({ pokemon }) => {
 
 	const classes = useStyles();
 
+	//Make a pokemon stared and put him in localStorage
+
 	const handleStared = () => {
 		const pokemonStared:Pokemon = {...pokemon, stared: true};
 		let existData = localStorage.getItem("pokemonsStared");
@@ -59,16 +63,24 @@ const CardPoke: React.FC<CardPokeProps> = ({ pokemon }) => {
 		dispatch(makePokemonStared(pokemonsUpdated));
 	};
 
+	//Make a pokemon unStared and update the localStorage
+
 	const handleUnStared = () => {
 		const pokemonUnStared:Pokemon = {...pokemon, stared: false};
+
 		let existData = localStorage.getItem("pokemonsStared");
+
 		let pokemonToLocalStorage = existData ? [...JSON.parse(existData)] : [];
+
 		const pokemonsFiltred = pokemonToLocalStorage.filter(poke => poke.id !== pokemonUnStared.id);
+
 		localStorage.setItem("pokemonsStared", JSON.stringify(pokemonsFiltred));
+
 		const pokemonsUpdated: Pokemon[] = pokedexState.pokemons.map((poke) => {
 			if (poke.id === pokemon.id) return { ...poke, stared: false };
 			return poke;
 		});
+
 		dispatch(setStaredPokemons(pokemonsUpdated));
 		dispatch(makePokemonStared(pokemonsUpdated));
 	};

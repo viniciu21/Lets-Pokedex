@@ -61,12 +61,14 @@ const Pokedex = () => {
 		ApplicationState["pokedexReducer"]
 	>((state) => state.pokedexReducer);
 
+	//Get pokemons from localStore and filter pokemons recived by redux
+
 	useEffect(() => {
 		let existItems = localStorage.getItem("pokemonsStared");
 		let dataLocalStorage = existItems ? [...JSON.parse(existItems)] : [];
 
 		const pokemonsStaredByStorage = pokemons.map(poke => {
-			const pokeStaredInLocal = dataLocalStorage.find(pokex => pokex.id === poke.id)
+			const pokeStaredInLocal = dataLocalStorage.find(pokex => pokex.id === poke.id);
 			if(pokeStaredInLocal) {
 				return pokeStaredInLocal;
 			}

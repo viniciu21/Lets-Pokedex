@@ -1,11 +1,11 @@
 export enum PokedexTypes {
-	getDataPokemonsStart = "getDataPokemonsStart",
-	getDataPokemonsSuccess = "getDataPokemonsSuccess",
-	getDataPokemonsFailure = "getDataPokemonsFailure",
-	makePokemonStared = "makePokemonStared",
-	setFiltredPokemons = "setFiltredPokemons",
-	setStaredPokemons = "setStaredPokemons",
-	updatePagination = "updatePagination",
+	getDataPokemonsStart = "@pokedex/getDataPokemonsStart",
+	getDataPokemonsSuccess = "@pokedex/getDataPokemonsSuccess",
+	getDataPokemonsFailure = "@pokedex/getDataPokemonsFailure",
+	makePokemonStared = "@pokedex/makePokemonStared",
+	setFiltredPokemons = "@pokedex/setFiltredPokemons",
+	setStaredPokemons = "@pokedex/setStaredPokemons",
+	updatePagination = "@pokedex/updatePagination",
 }
 
 export interface PokedexState {
