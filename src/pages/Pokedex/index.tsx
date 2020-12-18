@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		cardArea: {
 			padding: theme.spacing(5),
+			width: "100%"
 		},
 		inputArea: {
 			paddingTop: theme.spacing(2),
@@ -48,6 +49,9 @@ const useStyles = makeStyles((theme: Theme) =>
 			padding: theme.spacing(2),
 			marginBottom: theme.spacing(3),
 		},
+		grid: {
+			minWidth: "400px",
+		}
 	})
 );
 
@@ -85,7 +89,7 @@ const Pokedex = () => {
 				<Loading />
 			) : (
 				<div className={classes.cardArea}>
-					<Grid container spacing={3} justify="center" alignItems="center">
+					<Grid container spacing={3} justify="center" alignItems="center" className={classes.grid}>
 						{_.isEmpty(filtredPokemons) ? (
 							<CardMedia
 								component="img"

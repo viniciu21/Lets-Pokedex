@@ -25,10 +25,14 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
 			flexGrow: 1,
+			width: "100%",
 		},
 		paper: {
 			border: "10",
 		},
+		button: {
+			marginRight: theme.spacing(4),
+		}
 	})
 );
 
@@ -110,10 +114,10 @@ const CardPoke: React.FC<CardPokeProps> = ({ pokemon }) => {
 					</CardContent>
 				</CardActionArea>
 				<CardActions>
-					<Button size="small" color="primary" onClick={handleStared}>
+					<Button size="small" color="primary" onClick={handleStared} className={classes.button}>
 						Favorite
 					</Button>
-					<Button size="small" color="primary" onClick={handleUnStared}>
+					<Button size="small" color="primary" onClick={handleUnStared}className={classes.button}>
 						UnFavorite
 					</Button>
 					<div className={classes.root} />
