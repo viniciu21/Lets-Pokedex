@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { makePokemonStared, setStaredPokemons } from "../../store/actions/pokedex";
+import { makePokemonStared, setStaredPokemons } from "../../store/ducks/pokedex/actions";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import {
 	Card,
@@ -15,7 +15,7 @@ import {
 } from "@material-ui/core";
 import StarRateSharpIcon from "@material-ui/icons/StarRateSharp";
 
-import { Pokemon } from "../../store/types/pokedex";
+import { Pokemon } from "../../store/ducks/pokedex/types";
 import { ApplicationState } from "../../store";
 
 const useStyles = makeStyles((theme: Theme) =>

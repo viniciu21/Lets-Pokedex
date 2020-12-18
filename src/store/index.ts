@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, Store } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { PokedexState } from "./types/pokedex";
+import { PokedexState } from "./ducks/pokedex/types";
 
-import rootSaga from "./sagas";
-import rootReducer from "./reducers";
+import rootSaga from "./ducks/rootSaga";
+import rootReducer from "./ducks/rootReducer";
 
 export interface ApplicationState {
 	pokedexReducer: PokedexState;

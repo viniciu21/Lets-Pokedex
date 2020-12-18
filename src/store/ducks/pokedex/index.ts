@@ -1,6 +1,6 @@
 import { Reducer } from "redux";
 
-import { PokedexTypes, PokedexState } from "../types/pokedex";
+import { PokedexTypes, PokedexState } from "./types";
 
 const INITIAL_STATE: PokedexState = {
 	pokemons: [],

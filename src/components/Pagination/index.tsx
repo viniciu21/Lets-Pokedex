@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid, Button } from "@material-ui/core";
-import { updatePagination } from "../../store/actions/pokedex";
+import { updatePagination } from "../../store/ducks/pokedex/actions";
 import { ApplicationState } from "../../store";
 
 const Pagination = () => {

@@ -6,7 +6,7 @@ import CardPoke from "../../components/CardPoke/index";
 import { ApplicationState } from "../../store/index";
 import _ from "lodash";
 import Loading from "../../components/Loading/index";
-import { setFiltredPokemons } from "../../store/actions/pokedex";
+import { setFiltredPokemons } from "../../store/ducks/pokedex/actions";
 import Search from "../../components/Search/index";
 
 const useStyles = makeStyles((theme: Theme) =>

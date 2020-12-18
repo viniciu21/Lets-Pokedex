@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDataPokemonsStart } from "../store/actions/pokedex";
+import { getDataPokemonsStart } from "../store/ducks/pokedex/actions";
 import { CssBaseline } from "@material-ui/core";
 import Header from "./Header";
 import { BrowserRouter } from "react-router-dom";

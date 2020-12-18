@@ -1,5 +1,5 @@
 import { action } from "typesafe-actions";
-import { PokedexTypes, Pokemon } from "../types/pokedex";
+import { PokedexTypes, Pokemon } from "./types";
 
 export const getDataPokemonsStart = (data: number) =>
 	action(PokedexTypes.getDataPokemonsStart, data);

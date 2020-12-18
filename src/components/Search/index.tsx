@@ -13,7 +13,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { ApplicationState } from "../../store/index";
 import _ from "lodash";
 import pokedex from "../../assets/pokedex.png";
-import { setFiltredPokemons } from "../../store/actions/pokedex";
+import { setFiltredPokemons } from "../../store/ducks/pokedex/actions";
 import pokebolaPequena from "../../assets/pokebolaPequena.png";
 import Pagination from "../Pagination/index";
 

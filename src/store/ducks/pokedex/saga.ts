@@ -1,8 +1,8 @@
 import { all, call, put } from "redux-saga/effects";
-import { getPokemonsInitial } from "../../services/pokemon";
+import { getPokemonsInitial } from "../../../services/pokemon";
 import axios, { AxiosResponse } from "axios";
-import { Pokemon } from "../types/pokedex";
-import { getDataPokemonsSuccess } from "../actions/pokedex";
+import { Pokemon } from "./types";
+import { getDataPokemonsSuccess } from "./actions";
 
 interface pokemonResultFecth {
 	nome: string;

@@ -7,8 +7,8 @@ import { ApplicationState } from "../../store/index";
 import _ from "lodash";
 import Loading from "../../components/Loading/index";
 import Search from "../../components/Search/index";
-import { setFiltredPokemons, setStaredPokemons } from "../../store/actions/pokedex";
-import { Pokemon } from "../../store/types/pokedex";
+import { setFiltredPokemons, setStaredPokemons } from "../../store/ducks/pokedex/actions";
+import { Pokemon } from "../../store/ducks/pokedex/types";
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
