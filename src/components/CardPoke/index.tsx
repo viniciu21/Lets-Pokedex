@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { makePokemonStared, setStaredPokemons } from "../../store/ducks/pokedex/actions";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import './BgColor.css';
 import {
 	Card,
 	CardActionArea,
@@ -26,7 +27,6 @@ const useStyles = makeStyles((theme: Theme) =>
 		paper: {
 			border: "10",
 		},
-		image: {},
 	})
 );
 
@@ -80,10 +80,9 @@ const CardPoke: React.FC<CardPokeProps> = ({ pokemon }) => {
 					<CardMedia
 						image={pokemon.imgUrl}
 						component="img"
-						className={classes.image}
+						className={`${pokemon.types[0]}`}
 						alt={pokemon.name}
 						title={pokemon.name}
-						height="250"
 					/>
 					<CardContent>
 						<Typography gutterBottom variant="h5" component="h2">
@@ -92,7 +91,7 @@ const CardPoke: React.FC<CardPokeProps> = ({ pokemon }) => {
 						<Typography variant="body2" color="textSecondary" component="h6">
 							This is {pokemon.name}, he is{" "}
 							{pokemon.types.map((type) => (
-								<Chip label={type} key={type} color="secondary" />
+								<Chip label={type} key={type} color="primary" />
 							))}{" "}
 							types, he is so friendly!!!!.
 						</Typography>

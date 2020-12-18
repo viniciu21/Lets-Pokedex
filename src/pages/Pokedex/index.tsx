@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, CardMedia } from "@material-ui/core";
 import CardPoke from "../../components/CardPoke/index";
 import { ApplicationState } from "../../store/index";
 import _ from "lodash";
@@ -85,9 +85,10 @@ const Pokedex = () => {
 				<div className={classes.cardArea}>
 					<Grid container spacing={3} justify="center" alignItems="center">
 						{_.isEmpty(filtredPokemons) ? (
-							<img
-								src="https://raw.githubusercontent.com/figormartins/pokemon/master/frontend/src/assets/not-found.png"
-								alt="pokemon-not-found"
+							<CardMedia
+								component="img"
+								image="https://raw.githubusercontent.com/figormartins/pokemon/master/frontend/src/assets/not-found.png"
+								alt="no search"
 							/>
 						) : (
 							filtredPokemons.map((pokemon) => {

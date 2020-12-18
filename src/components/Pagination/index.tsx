@@ -22,9 +22,9 @@ const Pagination = () => {
 	return (
 		<Grid>
 			{pages !== 0 && (
-				<Button onClick={() => goPrevious()}>Decrement</Button>
+				<Button onClick={() => goPrevious()}>Prev Page</Button>
 			)}
-			<Button onClick={() => goNext()}>Increment</Button>
+			<Button onClick={() => goNext()}>Next Page</Button>
 		</Grid>
 	);
 };
